@@ -1,0 +1,4 @@
+F:\Programación en Bases de Datos\Boletos\Solución\bds\bin\Debug\bds.dll
+F:\Programación en Bases de Datos\Boletos\Solución\bds\bin\Debug\bds.pdb
+F:\Programación en Bases de Datos\Boletos\Solución\bds\obj\Debug\bds.dll
+F:\Programación en Bases de Datos\Boletos\Solución\bds\obj\Debug\bds.pdb
