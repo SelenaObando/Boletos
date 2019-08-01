@@ -2,3 +2,12 @@ F:\Programación en Bases de Datos\Boletos\Solución\bds\bin\Debug\bds.dll
 F:\Programación en Bases de Datos\Boletos\Solución\bds\bin\Debug\bds.pdb
 F:\Programación en Bases de Datos\Boletos\Solución\bds\obj\Debug\bds.dll
 F:\Programación en Bases de Datos\Boletos\Solución\bds\obj\Debug\bds.pdb
+F:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.dll
+F:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.pdb
+F:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
+F:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.dll
+F:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.pdb
+E:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.dll
+E:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.pdb
+E:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.dll
+E:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.pdb

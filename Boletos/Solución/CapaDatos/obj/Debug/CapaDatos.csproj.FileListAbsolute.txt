@@ -1,0 +1,14 @@
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.dll
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.pdb
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.dll
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.pdb
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.dll
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.pdb
+E:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.dll
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.pdb
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.dll
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.pdb
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.dll
+F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.pdb

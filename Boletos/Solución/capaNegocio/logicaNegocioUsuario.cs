@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidades;
-using CapaEntidades;
-using CapaDatos;
 
 namespace capaNegocio
 {

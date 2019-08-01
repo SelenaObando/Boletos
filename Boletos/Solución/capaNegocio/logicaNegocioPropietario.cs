@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace capaNegocio
 {
-    class logicaNegocioPropietario
+    public class logicaNegocioPropietario
     {
         accesoDatosPropietario ac = new accesoDatosPropietario();
 
