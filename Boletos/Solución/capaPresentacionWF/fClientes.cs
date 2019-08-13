@@ -15,6 +15,8 @@ namespace capaPresentacionWF
     public partial class fClientes : Form
     {
         logicaNegocioClientes logicaNC = new logicaNegocioClientes();
+        logicaNegocioRuta logicaRT = new logicaNegocioRuta();
+        logicaNegocioCompra_boleto logicaCB = new logicaNegocioCompra_boleto();
 
         public fClientes()
         {
@@ -32,8 +34,8 @@ namespace capaPresentacionWF
                     objetoClientes.Apellidos = textBoxApellidos.Text;
                     objetoClientes.Cedula = textBoxCedula.Text;
                     objetoClientes.Telefono = textBoxTelefono.Text;
-                    objetoClientes.Idruta = Convert.ToInt32(textBoxIdRuta.Text);
-                    objetoClientes.Idboleto = Convert.ToInt32(textBoxIdBoleto.Text);
+                    objetoClientes.Idruta = Convert.ToInt32(comboBoxIdRuta.Text);
+                    objetoClientes.Idboleto = Convert.ToInt32(comboBoxIdBoleto.Text);
 
                     if (logicaNC.insertarClientes(objetoClientes) > 0)
                     {
@@ -43,8 +45,8 @@ namespace capaPresentacionWF
                         textBoxApellidos.Text = "";
                         textBoxCedula.Text = "";
                         textBoxTelefono.Text = "";
-                        textBoxIdRuta.Text = "";
-                        textBoxIdBoleto.Text = "";
+                        comboBoxIdRuta.Text = "";
+                        comboBoxIdBoleto.Text = "";
                         tabClientes.SelectedTab = tabPage2;
                     }
                     else
@@ -58,8 +60,8 @@ namespace capaPresentacionWF
                     objetoClientes.Apellidos= textBoxApellidos.Text;
                     objetoClientes.Cedula = textBoxCedula.Text;
                     objetoClientes.Telefono = textBoxTelefono.Text;
-                    objetoClientes.Idruta = Convert.ToInt32(textBoxIdRuta.Text);
-                    objetoClientes.Idboleto = Convert.ToInt32(textBoxIdBoleto.Text);
+                    objetoClientes.Idruta = Convert.ToInt32(comboBoxIdRuta.Text);
+                    objetoClientes.Idboleto = Convert.ToInt32(comboBoxIdBoleto.Text);
 
                     if (logicaNC.EditarClientes(objetoClientes) > 0)
                     {
@@ -69,8 +71,8 @@ namespace capaPresentacionWF
                         textBoxApellidos.Text = "";
                         textBoxCedula.Text = "";
                         textBoxTelefono.Text = "";
-                        textBoxIdRuta.Text = "";
-                        textBoxIdBoleto.Text = "";
+                        comboBoxIdRuta.Text = "";
+                        comboBoxIdBoleto.Text = "";
                         tabClientes.SelectedTab = tabPage2;
                     }
                     else
@@ -89,7 +91,16 @@ namespace capaPresentacionWF
         private void fClientes_Load(object sender, EventArgs e)
         {
             textBoxId.Visible = false;
-            labelId.Visible = false;
+            labelIdcliente.Visible = false;
+
+            List<int> Rut = new List<int>();
+            Rut = logicaRT.listarRuta().Select(x => x.Idruta).ToList();
+            List<int> compbol = new List<int>();
+            compbol = logicaCB.listarCompra_boleto().Select(x => x.Idboleto).ToList();
+
+            comboBoxIdRuta.DataSource = Rut;
+            comboBoxIdBoleto.DataSource = compbol;
+            
             dataGridViewClientes.DataSource = logicaNC.listarClientes();
         }
 
@@ -97,15 +108,21 @@ namespace capaPresentacionWF
         {
             textBoxId.Visible = true;
             textBoxId.Enabled = false;
-            labelId.Visible = true;
+            labelIdcliente.Visible = true;
+            comboBoxIdRuta.Visible = true;
+            comboBoxIdRuta.Enabled = false;
+            labelIdRuta.Visible = true;
+            comboBoxIdBoleto.Visible = true;
+            comboBoxIdBoleto.Enabled = true;
+            labelIdBoleto.Visible = true;
 
             textBoxId.Text = dataGridViewClientes.CurrentRow.Cells["Idcliente"].Value.ToString();
             textBoxNombres.Text = dataGridViewClientes.CurrentRow.Cells["Nombres"].Value.ToString();
             textBoxApellidos.Text = dataGridViewClientes.CurrentRow.Cells["Apellidos"].Value.ToString();
             textBoxCedula.Text = dataGridViewClientes.CurrentRow.Cells["Cedula"].Value.ToString();
             textBoxTelefono.Text = dataGridViewClientes.CurrentRow.Cells["Telefono"].Value.ToString();
-            textBoxIdRuta.Text = dataGridViewClientes.CurrentRow.Cells["Idruta"].Value.ToString();
-            textBoxIdBoleto.Text = dataGridViewClientes.CurrentRow.Cells["Idboleto"].Value.ToString();
+            comboBoxIdRuta.Text = dataGridViewClientes.CurrentRow.Cells["Idruta"].Value.ToString();
+            comboBoxIdBoleto.Text = dataGridViewClientes.CurrentRow.Cells["Idboleto"].Value.ToString();
 
             tabClientes.SelectedTab = tabPage1;
             buttonGuardar.Text = "actualizar";

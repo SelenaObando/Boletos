@@ -37,3 +37,25 @@ F:\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacion
 K:\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaPresentacionWF.exe.config
 K:\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.exe
 K:\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.pdb
+J:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaPresentacionWF.exe.config
+J:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.exe
+J:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaPresentacionWF.exe.config
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.exe
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaPresentacionWF.exe
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaPresentacionWF.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\CapaDatos.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaNegocio.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\CapaDatos.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\bin\Debug\capaNegocio.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.csprojResolveAssemblyReference.cache
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.fClientes.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.fCompra_Boletos.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.fPropietario.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.fRuta.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.fUsuario.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.Properties.Resources.resources
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\capaPresentacionWF\obj\Debug\capaPresentacionWF.csproj.GenerateResource.Cache

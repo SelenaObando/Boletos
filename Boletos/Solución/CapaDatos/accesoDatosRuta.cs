@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaEntidades;	
 using System.Data;
+using CapaDatos;
 
 namespace CapaDatos
 {
@@ -56,53 +57,53 @@ namespace CapaDatos
         }
 
         public List<Ruta> listarRuta()
-{
-    try
-    {
-        SqlConnection cnx = cn.conectar();
-        cm = new SqlCommand("rut", cnx);
-        cm.Parameters.AddWithValue("@b", 3);
-        cm.Parameters.AddWithValue("@Idruta", "");
-        cm.Parameters.AddWithValue("@NombreR", "");
-        cm.Parameters.AddWithValue("@Idbus", "");
-        cm.Parameters.AddWithValue("@Cant_asientos", "");
-        cm.Parameters.AddWithValue("@Hora_origen1", "");
-        cm.Parameters.AddWithValue("@Hora_destino1", "");
-        cm.Parameters.AddWithValue("@Hora_origen2", "");
-        cm.Parameters.AddWithValue("@Hora_destino2", "");
-
-        cm.CommandType = CommandType.StoredProcedure;
-        cnx.Open();
-        dr = cm.ExecuteReader();
-        listaRuta = new List<Ruta>();
-        while (dr.Read())
         {
-            Ruta rt = new Ruta();
-            rt.Idruta = Convert.ToInt32(dr["idruta"].ToString());
-            rt.NombreR = dr["nombrer"].ToString();
-            rt.Idbus = Convert.ToInt32(dr["idbus"].ToString());
-            rt.Cant_asientos = Convert.ToInt32(dr["Cant_asientos"].ToString());
-            rt.Hora_origen1 = Convert.ToDateTime(dr["hora_origen1"]);
-            rt.Hora_destino1 = Convert.ToDateTime(dr["hora_destino1"]);
-            rt.Hora_origen2 = Convert.ToDateTime(dr["hora_origen2"]);
-            rt.Hora_destino2 = Convert.ToDateTime(dr["hora_destino2"]);
+            try
+            {
+                SqlConnection cnx = cn.conectar();
+                cm = new SqlCommand("rut", cnx);
+                cm.Parameters.AddWithValue("@b", 3);
+                cm.Parameters.AddWithValue("@Idruta", "");
+                cm.Parameters.AddWithValue("@NombreR", "");
+                cm.Parameters.AddWithValue("@Idbus", "");
+                cm.Parameters.AddWithValue("@Cant_asientos", "");
+                cm.Parameters.AddWithValue("@Hora_origen1", "");
+                cm.Parameters.AddWithValue("@Hora_destino1", "");
+                cm.Parameters.AddWithValue("@Hora_origen2", "");
+                cm.Parameters.AddWithValue("@Hora_destino2", "");
 
-            listaRuta.Add(rt);
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaRuta = new List<Ruta>();
+                while (dr.Read())
+                {
+                    Ruta rt = new Ruta();
+                    rt.Idruta = Convert.ToInt32(dr["Idruta"].ToString());
+                    rt.NombreR = dr["NombreR"].ToString();
+                    rt.Idbus = Convert.ToInt32(dr["Idbus"].ToString());
+                    rt.Cant_asientos = Convert.ToInt32(dr["Cant_asientos"].ToString());
+                    rt.Hora_origen1 = Convert.ToDateTime(dr["Hora_origen1"]);
+                    rt.Hora_destino1 = Convert.ToDateTime(dr["Hora_destino1"]);
+                    rt.Hora_origen2 = Convert.ToDateTime(dr["Hora_origen2"]);
+                    rt.Hora_destino2 = Convert.ToDateTime(dr["Hora_destino2"]);
+
+                    listaRuta.Add(rt);
+                }
+            }
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaRuta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaRuta;
+
         }
-    }
-
-    catch (Exception e)
-    {
-        e.Message.ToString();
-        listaRuta = null;
-    }
-finally
-{
-cm.Connection.Close();
-}
-return listaRuta;
-
-}
 
 
         public int EliminarRuta(int idrut)
@@ -178,54 +179,51 @@ return listaRuta;
         }
 
         public List<Ruta> BuscarRuta(string dato)
-{
-try
-{
-SqlConnection cnx= cn.conectar();
-cm= new SqlCommand("rut");
-cm.Parameters.AddWithValue("@b", 5);
-cm.Parameters.AddWithValue("@Idruta", "");
-cm.Parameters.AddWithValue("@NombreR", dato);
-cm.Parameters.AddWithValue("@Idbus", "");
-cm.Parameters.AddWithValue("@Cant_asientos", "");
-cm.Parameters.AddWithValue("@Hora_origen1", "");
-cm.Parameters.AddWithValue("@Hora_destino1", "");
-cm.Parameters.AddWithValue("@Hora_origen2", "");
-cm.Parameters.AddWithValue("@Hora_destino2", "");
+        {
+            try
+            {
+                SqlConnection cnx = cn.conectar();
+                cm = new SqlCommand("rut");
+                cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@Idruta", "");
+                cm.Parameters.AddWithValue("@NombreR", dato);
+                cm.Parameters.AddWithValue("@Idbus", "");
+                cm.Parameters.AddWithValue("@Cant_asientos", "");
+                cm.Parameters.AddWithValue("@Hora_origen1", "");
+                cm.Parameters.AddWithValue("@Hora_destino1", "");
+                cm.Parameters.AddWithValue("@Hora_origen2", "");
+                cm.Parameters.AddWithValue("@Hora_destino2", "");
 
-cm.CommandType=CommandType.StoredProcedure;
-cnx.Open();
-dr=cm.ExecuteReader();
-listaRuta= new List<Ruta>();
-while(dr.Read())
-{
-Ruta rt= new Ruta();
-rt.Idruta= Convert.ToInt32(dr["idruta"].ToString());
-rt.NombreR= dr["nombrer"].ToString();
-rt.Idbus = Convert.ToInt32(dr["idbus"].ToString());
-rt.Cant_asientos= Convert.ToInt32(dr["cant_asientos"].ToString());
-rt.Hora_origen1=Convert.ToDateTime(dr["Hora_origen1"]);
-rt.Hora_destino1=Convert.ToDateTime(dr["Hora_destino1"]);
-rt.Hora_origen2=Convert.ToDateTime(dr["Hora_origen2"]);
-rt.Hora_destino2=Convert.ToDateTime(dr["Hora_destino2"]);
-listaRuta.Add(rt);
-}
-}
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaRuta = new List<Ruta>();
+                while (dr.Read())
+                {
+                    Ruta rt = new Ruta();
+                    rt.Idruta = Convert.ToInt32(dr["Idruta"].ToString());
+                    rt.NombreR = dr["NombreR"].ToString();
+                    rt.Idbus = Convert.ToInt32(dr["Idbus"].ToString());
+                    rt.Cant_asientos = Convert.ToInt32(dr["Cant_asientos"].ToString());
+                    rt.Hora_origen1 = Convert.ToDateTime(dr["Hora_origen1"]);
+                    rt.Hora_destino1 = Convert.ToDateTime(dr["Hora_destino1"]);
+                    rt.Hora_origen2 = Convert.ToDateTime(dr["Hora_origen2"]);
+                    rt.Hora_destino2 = Convert.ToDateTime(dr["Hora_destino2"]);
+                    listaRuta.Add(rt);
+                }
+            }
 
-catch (Exception e)
-{
-e.Message.ToString();
-listaRuta=null;
-}
-finally
-{
-    cm.Connection.Close();
-}
-return listaRuta;
-
-
-}
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaRuta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaRuta;
+        }
     }
-
- 
 }
+

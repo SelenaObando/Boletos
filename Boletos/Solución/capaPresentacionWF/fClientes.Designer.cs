@@ -30,16 +30,22 @@
         {
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxIdBoleto = new System.Windows.Forms.ComboBox();
+            this.comboBoxIdRuta = new System.Windows.Forms.ComboBox();
+            this.labelIdBoleto = new System.Windows.Forms.Label();
+            this.labelIdRuta = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxNombres = new System.Windows.Forms.TextBox();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.textBoxCedula = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelId = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.labelApellidos = new System.Windows.Forms.Label();
+            this.labelCedula = new System.Windows.Forms.Label();
+            this.labelNombres = new System.Windows.Forms.Label();
+            this.labelIdcliente = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
@@ -47,12 +53,6 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxApellidos = new System.Windows.Forms.TextBox();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.textBoxIdRuta = new System.Windows.Forms.TextBox();
-            this.textBoxIdBoleto = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -71,11 +71,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBoxIdBoleto);
-            this.tabPage1.Controls.Add(this.textBoxIdRuta);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.comboBoxIdBoleto);
+            this.tabPage1.Controls.Add(this.comboBoxIdRuta);
+            this.tabPage1.Controls.Add(this.labelIdBoleto);
+            this.tabPage1.Controls.Add(this.labelIdRuta);
+            this.tabPage1.Controls.Add(this.labelTelefono);
             this.tabPage1.Controls.Add(this.textBoxTelefono);
             this.tabPage1.Controls.Add(this.buttonGuardar);
             this.tabPage1.Controls.Add(this.label7);
@@ -83,10 +83,10 @@
             this.tabPage1.Controls.Add(this.textBoxApellidos);
             this.tabPage1.Controls.Add(this.textBoxCedula);
             this.tabPage1.Controls.Add(this.textBoxId);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.labelId);
+            this.tabPage1.Controls.Add(this.labelApellidos);
+            this.tabPage1.Controls.Add(this.labelCedula);
+            this.tabPage1.Controls.Add(this.labelNombres);
+            this.tabPage1.Controls.Add(this.labelIdcliente);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -95,14 +95,48 @@
             this.tabPage1.Text = "Nuevo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // comboBoxIdBoleto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 250);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Telefono";
+            this.comboBoxIdBoleto.FormattingEnabled = true;
+            this.comboBoxIdBoleto.Location = new System.Drawing.Point(241, 325);
+            this.comboBoxIdBoleto.Name = "comboBoxIdBoleto";
+            this.comboBoxIdBoleto.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxIdBoleto.TabIndex = 21;
+            // 
+            // comboBoxIdRuta
+            // 
+            this.comboBoxIdRuta.FormattingEnabled = true;
+            this.comboBoxIdRuta.Location = new System.Drawing.Point(241, 289);
+            this.comboBoxIdRuta.Name = "comboBoxIdRuta";
+            this.comboBoxIdRuta.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxIdRuta.TabIndex = 20;
+            // 
+            // labelIdBoleto
+            // 
+            this.labelIdBoleto.AutoSize = true;
+            this.labelIdBoleto.Location = new System.Drawing.Point(138, 328);
+            this.labelIdBoleto.Name = "labelIdBoleto";
+            this.labelIdBoleto.Size = new System.Drawing.Size(49, 13);
+            this.labelIdBoleto.TabIndex = 19;
+            this.labelIdBoleto.Text = "Id Boleto";
+            // 
+            // labelIdRuta
+            // 
+            this.labelIdRuta.AutoSize = true;
+            this.labelIdRuta.Location = new System.Drawing.Point(145, 289);
+            this.labelIdRuta.Name = "labelIdRuta";
+            this.labelIdRuta.Size = new System.Drawing.Size(42, 13);
+            this.labelIdRuta.TabIndex = 18;
+            this.labelIdRuta.Text = "Id Ruta";
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.Location = new System.Drawing.Point(138, 250);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(49, 13);
+            this.labelTelefono.TabIndex = 15;
+            this.labelTelefono.Text = "Telefono";
             // 
             // textBoxTelefono
             // 
@@ -137,6 +171,13 @@
             this.textBoxNombres.Size = new System.Drawing.Size(238, 20);
             this.textBoxNombres.TabIndex = 11;
             // 
+            // textBoxApellidos
+            // 
+            this.textBoxApellidos.Location = new System.Drawing.Point(241, 166);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(238, 20);
+            this.textBoxApellidos.TabIndex = 10;
+            // 
             // textBoxCedula
             // 
             this.textBoxCedula.Location = new System.Drawing.Point(241, 206);
@@ -144,41 +185,48 @@
             this.textBoxCedula.Size = new System.Drawing.Size(238, 20);
             this.textBoxCedula.TabIndex = 9;
             // 
-            // label4
+            // textBoxId
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Apellidos";
+            this.textBoxId.Location = new System.Drawing.Point(241, 80);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(238, 20);
+            this.textBoxId.TabIndex = 6;
             // 
-            // label3
+            // labelApellidos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(138, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cedula";
+            this.labelApellidos.AutoSize = true;
+            this.labelApellidos.Location = new System.Drawing.Point(138, 169);
+            this.labelApellidos.Name = "labelApellidos";
+            this.labelApellidos.Size = new System.Drawing.Size(49, 13);
+            this.labelApellidos.TabIndex = 3;
+            this.labelApellidos.Text = "Apellidos";
             // 
-            // label2
+            // labelCedula
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombres";
+            this.labelCedula.AutoSize = true;
+            this.labelCedula.Location = new System.Drawing.Point(138, 209);
+            this.labelCedula.Name = "labelCedula";
+            this.labelCedula.Size = new System.Drawing.Size(40, 13);
+            this.labelCedula.TabIndex = 2;
+            this.labelCedula.Text = "Cedula";
             // 
-            // labelId
+            // labelNombres
             // 
-            this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(159, 83);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
-            this.labelId.TabIndex = 0;
-            this.labelId.Text = "Id";
+            this.labelNombres.AutoSize = true;
+            this.labelNombres.Location = new System.Drawing.Point(138, 123);
+            this.labelNombres.Name = "labelNombres";
+            this.labelNombres.Size = new System.Drawing.Size(49, 13);
+            this.labelNombres.TabIndex = 1;
+            this.labelNombres.Text = "Nombres";
+            // 
+            // labelIdcliente
+            // 
+            this.labelIdcliente.AutoSize = true;
+            this.labelIdcliente.Location = new System.Drawing.Point(159, 83);
+            this.labelIdcliente.Name = "labelIdcliente";
+            this.labelIdcliente.Size = new System.Drawing.Size(16, 13);
+            this.labelIdcliente.TabIndex = 0;
+            this.labelIdcliente.Text = "Id";
             // 
             // tabPage2
             // 
@@ -250,52 +298,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Buscar";
             // 
-            // textBoxApellidos
-            // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(241, 166);
-            this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(238, 20);
-            this.textBoxApellidos.TabIndex = 10;
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(241, 80);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(238, 20);
-            this.textBoxId.TabIndex = 6;
-            // 
-            // textBoxIdRuta
-            // 
-            this.textBoxIdRuta.Location = new System.Drawing.Point(241, 286);
-            this.textBoxIdRuta.Name = "textBoxIdRuta";
-            this.textBoxIdRuta.Size = new System.Drawing.Size(238, 20);
-            this.textBoxIdRuta.TabIndex = 16;
-            // 
-            // textBoxIdBoleto
-            // 
-            this.textBoxIdBoleto.Location = new System.Drawing.Point(241, 325);
-            this.textBoxIdBoleto.Name = "textBoxIdBoleto";
-            this.textBoxIdBoleto.Size = new System.Drawing.Size(238, 20);
-            this.textBoxIdBoleto.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(145, 289);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Id Ruta";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(138, 328);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Id Boleto";
-            // 
             // fClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,10 +325,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxNombres;
         private System.Windows.Forms.TextBox textBoxCedula;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.Label labelApellidos;
+        private System.Windows.Forms.Label labelCedula;
+        private System.Windows.Forms.Label labelNombres;
+        private System.Windows.Forms.Label labelIdcliente;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonEliminar;
@@ -334,13 +336,13 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.TextBox textBoxTelefono;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxIdBoleto;
-        private System.Windows.Forms.TextBox textBoxIdRuta;
+        private System.Windows.Forms.Label labelIdBoleto;
+        private System.Windows.Forms.Label labelIdRuta;
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.ComboBox comboBoxIdBoleto;
+        private System.Windows.Forms.ComboBox comboBoxIdRuta;
     }
 }

@@ -30,14 +30,13 @@
         {
             this.tabUsuario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.textBoxCorreo = new System.Windows.Forms.TextBox();
-            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonoU = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
@@ -75,7 +75,7 @@
             this.tabPage1.Controls.Add(this.textBoxApellido);
             this.tabPage1.Controls.Add(this.textBoxDireccion);
             this.tabPage1.Controls.Add(this.textBoxCorreo);
-            this.tabPage1.Controls.Add(this.textBoxTelefono);
+            this.tabPage1.Controls.Add(this.textBoxTelefonoU);
             this.tabPage1.Controls.Add(this.textBoxId);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -90,22 +90,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.buttonEditar);
-            this.tabPage2.Controls.Add(this.buttonEliminar);
-            this.tabPage2.Controls.Add(this.dataGridViewUsuario);
-            this.tabPage2.Controls.Add(this.buttonBuscar);
-            this.tabPage2.Controls.Add(this.textBoxBuscar);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(733, 402);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Detalle";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // buttonGuardar
             // 
@@ -154,12 +138,12 @@
             this.textBoxCorreo.Size = new System.Drawing.Size(238, 20);
             this.textBoxCorreo.TabIndex = 22;
             // 
-            // textBoxTelefono
+            // textBoxTelefonoU
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(253, 297);
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(238, 20);
-            this.textBoxTelefono.TabIndex = 21;
+            this.textBoxTelefonoU.Location = new System.Drawing.Point(253, 297);
+            this.textBoxTelefonoU.Name = "textBoxTelefonoU";
+            this.textBoxTelefonoU.Size = new System.Drawing.Size(238, 20);
+            this.textBoxTelefonoU.TabIndex = 21;
             // 
             // textBoxId
             // 
@@ -221,6 +205,22 @@
             this.labelId.Size = new System.Drawing.Size(16, 13);
             this.labelId.TabIndex = 14;
             this.labelId.Text = "Id";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.buttonEditar);
+            this.tabPage2.Controls.Add(this.buttonEliminar);
+            this.tabPage2.Controls.Add(this.dataGridViewUsuario);
+            this.tabPage2.Controls.Add(this.buttonBuscar);
+            this.tabPage2.Controls.Add(this.textBoxBuscar);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(733, 402);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Detalle";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // buttonEditar
             // 
@@ -305,7 +305,7 @@
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.TextBox textBoxDireccion;
         private System.Windows.Forms.TextBox textBoxCorreo;
-        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.TextBox textBoxTelefonoU;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

@@ -12,7 +12,8 @@ namespace CapaDatos
         public SqlConnection conectar()
         {
             SqlConnection cn=new SqlConnection();
-            cn.ConnectionString = "Data Source=LAPTOP-2DSLLMKU\\SQLEXPRESS;Initial Catalog=Buses_Boletos;Integrated Security=True;";
+            cn.ConnectionString = "Data Source=FAREM_B4_11-PC\\SQLEXPRESS;Initial Catalog=Buses_Boletos;Integrated Security=True";
+                                               
             return cn;
         }
     }

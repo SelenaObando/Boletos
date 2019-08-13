@@ -42,7 +42,7 @@ namespace capaPresentacionWF
                     objetoUsuario.Apellido = textBoxApellido.Text;
                     objetoUsuario.Direccion = textBoxDireccion.Text;
                     objetoUsuario.Correo = textBoxCorreo.Text;
-                    objetoUsuario.TelefonoU = textBoxTelefono.Text;
+                    objetoUsuario.TelefonoU = textBoxTelefonoU.Text;
 
                     if (logicaNU.insertarUsuario(objetoUsuario) > 0)
                     {
@@ -52,7 +52,7 @@ namespace capaPresentacionWF
                         textBoxApellido.Text = "";
                         textBoxDireccion.Text = "";
                         textBoxCorreo.Text = "";
-                        textBoxTelefono.Text = "";
+                        textBoxTelefonoU.Text = "";
                         tabUsuario.SelectedTab = tabPage2;
                     }
                     else
@@ -66,7 +66,7 @@ namespace capaPresentacionWF
                     objetoUsuario.Apellido = textBoxApellido.Text;
                     objetoUsuario.Direccion = textBoxDireccion.Text;
                     objetoUsuario.Correo = textBoxCorreo.Text;
-                    objetoUsuario.TelefonoU = textBoxTelefono.Text;
+                    objetoUsuario.TelefonoU = textBoxTelefonoU.Text;
 
                     if (logicaNU.EditarUsuario(objetoUsuario) > 0)
                     {
@@ -76,7 +76,7 @@ namespace capaPresentacionWF
                         textBoxApellido.Text = "";
                         textBoxDireccion.Text = "";
                         textBoxCorreo.Text = "";
-                        textBoxTelefono.Text = "";
+                        textBoxTelefonoU.Text = "";
                         tabUsuario.SelectedTab = tabPage2;
                     }
                     else
@@ -106,11 +106,11 @@ namespace capaPresentacionWF
             labelId.Visible = true;
 
             textBoxId.Text = dataGridViewUsuario.CurrentRow.Cells["Idusuario"].Value.ToString();
-            textBoxNombre.Text = dataGridViewUsuario.CurrentRow.Cells["Nombres"].Value.ToString();
-            textBoxApellido.Text = dataGridViewUsuario.CurrentRow.Cells["Apellidos"].Value.ToString();
+            textBoxNombre.Text = dataGridViewUsuario.CurrentRow.Cells["Nombre"].Value.ToString();
+            textBoxApellido.Text = dataGridViewUsuario.CurrentRow.Cells["Apellido"].Value.ToString();
             textBoxDireccion.Text = dataGridViewUsuario.CurrentRow.Cells["Direccion"].Value.ToString();
             textBoxCorreo.Text = dataGridViewUsuario.CurrentRow.Cells["Correo"].Value.ToString();
-            textBoxTelefono.Text = dataGridViewUsuario.CurrentRow.Cells["Telefono"].Value.ToString();
+            textBoxTelefonoU.Text = dataGridViewUsuario.CurrentRow.Cells["TelefonoU"].Value.ToString();
 
             tabUsuario.SelectedTab = tabPage1;
             buttonGuardar.Text = "Actualizar";

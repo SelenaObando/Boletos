@@ -12,3 +12,10 @@ F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.dll
 F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.pdb
 F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.dll
 F:\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaDatos.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Debug\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Debug\CapaDatos.pdb

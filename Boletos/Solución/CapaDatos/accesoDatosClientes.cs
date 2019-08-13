@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaEntidades;	
 using System.Data;
+using CapaDatos;
 
 namespace CapaDatos
 {
@@ -185,7 +186,7 @@ cl.Idcliente= Convert.ToInt32(dr["idcliente"].ToString());
 cl.Nombres= dr["nombres"].ToString();
 cl.Apellidos=dr["apellidos"].ToString();
 cl.Cedula=dr["cedula"].ToString();
-cl.Telefono=dr["Telefono"].ToString();
+cl.Telefono=dr["telefono"].ToString();
 listaClientes.Add(cl);
 }
 }

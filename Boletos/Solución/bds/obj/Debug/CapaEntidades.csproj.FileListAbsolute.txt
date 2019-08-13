@@ -11,3 +11,8 @@ E:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.dll
 E:\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.pdb
 E:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.dll
 E:\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\bin\Debug\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\obj\Debug\CapaEntidades.pdb

@@ -30,11 +30,11 @@
         {
             this.tabCompraBoleto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelIdRuta = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxNumeroAsiento = new System.Windows.Forms.TextBox();
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
-            this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxIdRuta = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxIdRuta = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.tabCompraBoleto.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,13 +67,13 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBoxIdRuta);
+            this.tabPage1.Controls.Add(this.dateTimePickerFecha);
+            this.tabPage1.Controls.Add(this.comboBoxIdRuta);
+            this.tabPage1.Controls.Add(this.labelIdRuta);
             this.tabPage1.Controls.Add(this.buttonGuardar);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.textBoxNumeroAsiento);
             this.tabPage1.Controls.Add(this.textBoxPrecio);
-            this.tabPage1.Controls.Add(this.textBoxFecha);
             this.tabPage1.Controls.Add(this.textBoxId);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -86,6 +86,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelIdRuta
+            // 
+            this.labelIdRuta.AutoSize = true;
+            this.labelIdRuta.Location = new System.Drawing.Point(154, 244);
+            this.labelIdRuta.Name = "labelIdRuta";
+            this.labelIdRuta.Size = new System.Drawing.Size(42, 13);
+            this.labelIdRuta.TabIndex = 15;
+            this.labelIdRuta.Text = "Id Ruta";
             // 
             // buttonGuardar
             // 
@@ -119,13 +128,6 @@
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(238, 20);
             this.textBoxPrecio.TabIndex = 10;
-            // 
-            // textBoxFecha
-            // 
-            this.textBoxFecha.Location = new System.Drawing.Point(241, 203);
-            this.textBoxFecha.Name = "textBoxFecha";
-            this.textBoxFecha.Size = new System.Drawing.Size(238, 20);
-            this.textBoxFecha.TabIndex = 9;
             // 
             // textBoxId
             // 
@@ -240,21 +242,20 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Buscar";
             // 
-            // textBoxIdRuta
+            // comboBoxIdRuta
             // 
-            this.textBoxIdRuta.Location = new System.Drawing.Point(241, 241);
-            this.textBoxIdRuta.Name = "textBoxIdRuta";
-            this.textBoxIdRuta.Size = new System.Drawing.Size(238, 20);
-            this.textBoxIdRuta.TabIndex = 14;
+            this.comboBoxIdRuta.FormattingEnabled = true;
+            this.comboBoxIdRuta.Location = new System.Drawing.Point(241, 241);
+            this.comboBoxIdRuta.Name = "comboBoxIdRuta";
+            this.comboBoxIdRuta.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxIdRuta.TabIndex = 21;
             // 
-            // label1
+            // dateTimePickerFecha
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Id Ruta";
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(241, 206);
+            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(238, 20);
+            this.dateTimePickerFecha.TabIndex = 22;
             // 
             // fCompra_Boletos
             // 
@@ -283,7 +284,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxNumeroAsiento;
         private System.Windows.Forms.TextBox textBoxPrecio;
-        private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -296,7 +296,8 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxIdRuta;
+        private System.Windows.Forms.Label labelIdRuta;
+        private System.Windows.Forms.ComboBox comboBoxIdRuta;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
     }
 }

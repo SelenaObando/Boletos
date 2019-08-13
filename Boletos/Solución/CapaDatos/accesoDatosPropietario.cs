@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaEntidades;	
 using System.Data;
+using CapaDatos;
 
 namespace CapaDatos
 {
@@ -25,7 +26,7 @@ namespace CapaDatos
             {
                 SqlConnection cnx = cn.conectar();
 
-                cm = new SqlCommand("propietario", cnx);
+                cm = new SqlCommand("propiet", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@Idpropietario", "");
                 cm.Parameters.AddWithValue("@Nombresp", p.Nombresp);
@@ -53,48 +54,48 @@ namespace CapaDatos
         }
 
         public List<Propietario> listarPropietario()
-{
-    try
-    {
-        SqlConnection cnx = cn.conectar();
-        cm = new SqlCommand("propietario", cnx);
-        cm.Parameters.AddWithValue("@b", 3);
-        cm.Parameters.AddWithValue("@Idpripietario", "");
-        cm.Parameters.AddWithValue("@Nombresp", "");
-        cm.Parameters.AddWithValue("@Apellidosp", "");
-        cm.Parameters.AddWithValue("@Direccionp", "");
-        cm.Parameters.AddWithValue("@Telefonop", "");
-        cm.Parameters.AddWithValue("@Nombretransp", "");
-
-        cm.CommandType = CommandType.StoredProcedure;
-        cnx.Open();
-        dr = cm.ExecuteReader();
-        listaPropietario = new List<Propietario>();
-        while (dr.Read())
         {
-            Propietario prop = new Propietario();
-            prop.Idpropietario = Convert.ToInt32(dr["idbus"].ToString());
-            prop.Nombresp = dr["nombresd"].ToString();
-            prop.Apellidosp = dr["apellidosd"].ToString();
-            prop.Direccionp = dr["direcciond"].ToString();
-            prop.Telefonop = dr["telefonod"].ToString();
-            prop.Nombretransp = dr["nombretransp"].ToString();
+            try
+            {
+                SqlConnection cnx = cn.conectar();
+                cm = new SqlCommand("propiet", cnx);
+                cm.Parameters.AddWithValue("@b", 3);
+                cm.Parameters.AddWithValue("@Idpropietario", "");
+                cm.Parameters.AddWithValue("@Nombresp", "");
+                cm.Parameters.AddWithValue("@Apellidosp", "");
+                cm.Parameters.AddWithValue("@Direccionp", "");
+                cm.Parameters.AddWithValue("@Telefonop", "");
+                cm.Parameters.AddWithValue("@Nombretransp", "");
 
-            listaPropietario.Add(prop);
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaPropietario = new List<Propietario>();
+                while (dr.Read())
+                {
+                    Propietario prop = new Propietario();
+                    prop.Idpropietario = Convert.ToInt32(dr["idpropietario"].ToString());
+                    prop.Nombresp = dr["nombresp"].ToString();
+                    prop.Apellidosp = dr["apellidosp"].ToString();
+                    prop.Direccionp = dr["direccionp"].ToString();
+                    prop.Telefonop = dr["telefonop"].ToString();
+                    prop.Nombretransp = dr["nombretransp"].ToString();
+
+                    listaPropietario.Add(prop);
+                }
+            }
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaPropietario = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaPropietario;
         }
-    }
-
-    catch (Exception e)
-    {
-        e.Message.ToString();
-        listaPropietario = null;
-    }
-finally
-{
-cm.Connection.Close();
-}
-return listaPropietario;
-}
 
 
         public int EliminarPropietario(int idpropieta)
@@ -103,7 +104,7 @@ return listaPropietario;
             {
                 SqlConnection cnx = cn.conectar();
 
-                cm = new SqlCommand("propietario", cnx);
+                cm = new SqlCommand("propiet", cnx);
                 cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@Idpropietario", idpropieta);
                 cm.Parameters.AddWithValue("@Nombresp", "");
@@ -137,14 +138,14 @@ return listaPropietario;
             {
 
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("propietario", cnx);
+                cm = new SqlCommand("propiet", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
-                cm.Parameters.AddWithValue("@Idbus", p.Idpropietario);
+                cm.Parameters.AddWithValue("@Idpropietario", p.Idpropietario);
                 cm.Parameters.AddWithValue("@Nombresp", "");
                 cm.Parameters.AddWithValue("@Apellidosp", "");
                 cm.Parameters.AddWithValue("@Direccionp", "");
                 cm.Parameters.AddWithValue("@Telefonop", "");
-                cm.Parameters.AddWithValue(@"Nombretransp","");
+                cm.Parameters.AddWithValue("@Nombretransp", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -166,49 +167,50 @@ return listaPropietario;
         }
 
         public List<Propietario> BuscarPropietario(string dato)
-{
-try
-{
-SqlConnection cnx= cn.conectar();
-cm= new SqlCommand("propietario");
-cm.Parameters.AddWithValue("@b", 5);
-cm.Parameters.AddWithValue("@Idbus", "");
-cm.Parameters.AddWithValue("@Nombresp", dato);
-cm.Parameters.AddWithValue("@Apellidosp", "");
-cm.Parameters.AddWithValue("@Direccionp", "");
-cm.Parameters.AddWithValue("@Telefonop", "");
-cm.Parameters.AddWithValue("@Nombretransp", "");
+        {
+            try
+            {
+                SqlConnection cnx = cn.conectar();
+                cm = new SqlCommand("propiet");
+                cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@Idpropietario", "");
+                cm.Parameters.AddWithValue("@Nombresp", dato);
+                cm.Parameters.AddWithValue("@Apellidosp", "");
+                cm.Parameters.AddWithValue("@Direccionp", "");
+                cm.Parameters.AddWithValue("@Telefonop", "");
+                cm.Parameters.AddWithValue("@Nombretransp", "");
 
-cm.CommandType=CommandType.StoredProcedure;
-cnx.Open();
-dr=cm.ExecuteReader();
-listaPropietario= new List<Propietario>();
-while(dr.Read())
-{
-Propietario prop= new Propietario();
-prop.Idpropietario= Convert.ToInt32(dr["idpropietario"].ToString());
-prop.Nombresp= dr["nombresd"].ToString();
-prop.Apellidosp= dr["apellidos"].ToString();
-prop.Direccionp= dr["direcciond"].ToString();
-prop.Telefonop= dr["telefonod"].ToString();
-prop.Nombretransp = dr["nombretransp"].ToString();
-listaPropietario.Add(prop);
-}
-}
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaPropietario = new List<Propietario>();
+                while (dr.Read())
+                {
+                    Propietario prop = new Propietario();
+                    prop.Idpropietario = Convert.ToInt32(dr["idpropietario"].ToString());
+                    prop.Nombresp = dr["nombresp"].ToString();
+                    prop.Apellidosp = dr["apellidosp"].ToString();
+                    prop.Direccionp = dr["direccionp"].ToString();
+                    prop.Telefonop = dr["telefonop"].ToString();
+                    prop.Nombretransp = dr["nombretransp"].ToString();
+                    listaPropietario.Add(prop);
+                }
+            }
 
-catch (Exception e)
-{
-e.Message.ToString();
-listaPropietario=null;
-}
-finally
-{
-    cm.Connection.Close();
-}
-return listaPropietario;
-
-}
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaPropietario = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaPropietario;
+        }
     }
+}
+    
 
     
-}
+

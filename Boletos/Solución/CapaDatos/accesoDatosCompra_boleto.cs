@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaEntidades;	
 using System.Data;
+using CapaDatos;
 
 namespace CapaDatos
 {
@@ -165,6 +166,7 @@ cm.Parameters.AddWithValue("@b", 5);
 cm.Parameters.AddWithValue("@Idcompraboleto", "");
 cm.Parameters.AddWithValue("@Nmero_asiento", "");
 cm.Parameters.AddWithValue("@Precio", "");
+cm.Parameters.AddWithValue("@Fecha", "");
 
 cm.CommandType=CommandType.StoredProcedure;
 cnx.Open();
