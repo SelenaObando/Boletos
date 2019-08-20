@@ -32,8 +32,8 @@ namespace capaPresentacionWF
                     Compra_boleto objetoCompraBoleto = new Compra_boleto();
                     objetoCompraBoleto.Nmero_asiento = Convert.ToInt32(textBoxNumeroAsiento.Text);
                     objetoCompraBoleto.Precio = Convert.ToInt32(textBoxPrecio.Text);
-                    objetoCompraBoleto.Fecha = Convert.ToDateTime(dateTimePickerFecha.Text);
-                    objetoCompraBoleto.Idruta = Convert.ToInt32(comboBoxIdRuta.Text);
+                    objetoCompraBoleto.Fecha = textBoxFecha.Text;
+                    objetoCompraBoleto.Idruta = Convert.ToInt32(comboBoxIdRuta.SelectedValue.ToString());
 
                     if (logicaNCB.insertarCompra_boleto(objetoCompraBoleto) > 0)
                     {
@@ -41,7 +41,7 @@ namespace capaPresentacionWF
                         dataGridViewCompraBoleto.DataSource = logicaNCB.listarCompra_boleto();
                         textBoxNumeroAsiento.Text = "";
                         textBoxPrecio.Text = "";
-                        dateTimePickerFecha.Text = "";
+                        textBoxFecha.Text = "";
                         comboBoxIdRuta.Text = "";
                         tabCompraBoleto.SelectedTab = tabPage2;
                     }
@@ -54,7 +54,7 @@ namespace capaPresentacionWF
                     objetoCompraBoleto.Idboleto = Convert.ToInt32(textBoxId.Text);
                     objetoCompraBoleto.Nmero_asiento = Convert.ToInt32(textBoxNumeroAsiento.Text);
                     objetoCompraBoleto.Precio = Convert.ToInt32(textBoxPrecio.Text);
-                    objetoCompraBoleto.Fecha = Convert.ToDateTime(dateTimePickerFecha.Text);
+                    objetoCompraBoleto.Fecha = textBoxFecha.Text;
                     objetoCompraBoleto.Idruta = Convert.ToInt32(comboBoxIdRuta.Text);
 
                     if (logicaNCB.EditarCompra_boleto(objetoCompraBoleto) > 0)
@@ -63,7 +63,7 @@ namespace capaPresentacionWF
                         dataGridViewCompraBoleto.DataSource = logicaNCB.listarCompra_boleto();
                         textBoxNumeroAsiento.Text = "";
                         textBoxPrecio.Text = "";
-                        dateTimePickerFecha.Text = "";
+                        textBoxFecha.Text = "";
                         comboBoxIdRuta.Text = "";
                         tabCompraBoleto.SelectedTab = tabPage2;
                     }
@@ -85,10 +85,19 @@ namespace capaPresentacionWF
             textBoxId.Visible = false;
             labelId.Visible = false;
 
-            List<int> Rt= new List<int>();
-            Rt= logicaRT.listarRuta().Select(x => x.Idruta).ToList();
+            var datos = logicaRT.listarRuta();
+            comboBoxIdRuta.DataSource = (
+                from rutas in datos
+                select new
+                {
+                    rutas.Idruta,
+                    nombreruta = rutas.NombreR
+                }
+            ).ToList();
 
-            comboBoxIdRuta.DataSource = Rt;
+            comboBoxIdRuta.ValueMember = "Idruta";
+            comboBoxIdRuta.DisplayMember = "nombreruta";
+
             dataGridViewCompraBoleto.DataSource = logicaNCB.listarCompra_boleto();
         }
 
@@ -104,7 +113,7 @@ namespace capaPresentacionWF
             textBoxId.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Idboleto"].Value.ToString();
             textBoxNumeroAsiento.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Nmero_asiento"].Value.ToString();
             textBoxPrecio.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Precio"].Value.ToString();
-            dateTimePickerFecha.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Fecha"].Value.ToString();
+            textBoxFecha.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Fecha"].Value.ToString();
             comboBoxIdRuta.Text = dataGridViewCompraBoleto.CurrentRow.Cells["Idruta"].Value.ToString();
 
             tabCompraBoleto.SelectedTab = tabPage1;

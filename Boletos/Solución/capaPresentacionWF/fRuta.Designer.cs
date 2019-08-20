@@ -30,13 +30,12 @@
         {
             this.tabRecursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePickerHoraDestino2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerHoraOrigen2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerHoraDestino1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerHoraOrigen1 = new System.Windows.Forms.DateTimePicker();
-            this.textBoxIdbus = new System.Windows.Forms.TextBox();
+            this.textBoxHoraDestino2 = new System.Windows.Forms.TextBox();
+            this.textBoxHoraOrigen2 = new System.Windows.Forms.TextBox();
+            this.textBoxHoraDestino1 = new System.Windows.Forms.TextBox();
+            this.textBoxHoraOrigen1 = new System.Windows.Forms.TextBox();
+            this.comboBoxNombreRuta = new System.Windows.Forms.ComboBox();
             this.comboBoxIdpropietario = new System.Windows.Forms.ComboBox();
-            this.labelIdbus = new System.Windows.Forms.Label();
             this.labelIdpropietario = new System.Windows.Forms.Label();
             this.labelHoraDestino2 = new System.Windows.Forms.Label();
             this.labelHoraOrigen2 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.labelCantdAsientos = new System.Windows.Forms.Label();
             this.labelNombreRuta = new System.Windows.Forms.Label();
             this.textBoxCant_asientos = new System.Windows.Forms.TextBox();
-            this.textBoxNRuta = new System.Windows.Forms.TextBox();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
@@ -75,13 +73,12 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePickerHoraDestino2);
-            this.tabPage1.Controls.Add(this.dateTimePickerHoraOrigen2);
-            this.tabPage1.Controls.Add(this.dateTimePickerHoraDestino1);
-            this.tabPage1.Controls.Add(this.dateTimePickerHoraOrigen1);
-            this.tabPage1.Controls.Add(this.textBoxIdbus);
+            this.tabPage1.Controls.Add(this.textBoxHoraDestino2);
+            this.tabPage1.Controls.Add(this.textBoxHoraOrigen2);
+            this.tabPage1.Controls.Add(this.textBoxHoraDestino1);
+            this.tabPage1.Controls.Add(this.textBoxHoraOrigen1);
+            this.tabPage1.Controls.Add(this.comboBoxNombreRuta);
             this.tabPage1.Controls.Add(this.comboBoxIdpropietario);
-            this.tabPage1.Controls.Add(this.labelIdbus);
             this.tabPage1.Controls.Add(this.labelIdpropietario);
             this.tabPage1.Controls.Add(this.labelHoraDestino2);
             this.tabPage1.Controls.Add(this.labelHoraOrigen2);
@@ -91,7 +88,6 @@
             this.tabPage1.Controls.Add(this.labelCantdAsientos);
             this.tabPage1.Controls.Add(this.labelNombreRuta);
             this.tabPage1.Controls.Add(this.textBoxCant_asientos);
-            this.tabPage1.Controls.Add(this.textBoxNRuta);
             this.tabPage1.Controls.Add(this.buttonGuardar);
             this.tabPage1.Controls.Add(this.textBoxId);
             this.tabPage1.Controls.Add(this.labelId);
@@ -103,157 +99,156 @@
             this.tabPage1.Text = "Nuevo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePickerHoraDestino2
+            // textBoxHoraDestino2
             // 
-            this.dateTimePickerHoraDestino2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerHoraDestino2.Location = new System.Drawing.Point(204, 312);
-            this.dateTimePickerHoraDestino2.Name = "dateTimePickerHoraDestino2";
-            this.dateTimePickerHoraDestino2.Size = new System.Drawing.Size(291, 20);
-            this.dateTimePickerHoraDestino2.TabIndex = 24;
+            this.textBoxHoraDestino2.Location = new System.Drawing.Point(204, 301);
+            this.textBoxHoraDestino2.Name = "textBoxHoraDestino2";
+            this.textBoxHoraDestino2.Size = new System.Drawing.Size(291, 20);
+            this.textBoxHoraDestino2.TabIndex = 29;
             // 
-            // dateTimePickerHoraOrigen2
+            // textBoxHoraOrigen2
             // 
-            this.dateTimePickerHoraOrigen2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerHoraOrigen2.Location = new System.Drawing.Point(204, 278);
-            this.dateTimePickerHoraOrigen2.Name = "dateTimePickerHoraOrigen2";
-            this.dateTimePickerHoraOrigen2.Size = new System.Drawing.Size(291, 20);
-            this.dateTimePickerHoraOrigen2.TabIndex = 23;
+            this.textBoxHoraOrigen2.Location = new System.Drawing.Point(204, 268);
+            this.textBoxHoraOrigen2.Name = "textBoxHoraOrigen2";
+            this.textBoxHoraOrigen2.Size = new System.Drawing.Size(291, 20);
+            this.textBoxHoraOrigen2.TabIndex = 28;
             // 
-            // dateTimePickerHoraDestino1
+            // textBoxHoraDestino1
             // 
-            this.dateTimePickerHoraDestino1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerHoraDestino1.Location = new System.Drawing.Point(204, 245);
-            this.dateTimePickerHoraDestino1.Name = "dateTimePickerHoraDestino1";
-            this.dateTimePickerHoraDestino1.Size = new System.Drawing.Size(291, 20);
-            this.dateTimePickerHoraDestino1.TabIndex = 22;
+            this.textBoxHoraDestino1.Location = new System.Drawing.Point(204, 226);
+            this.textBoxHoraDestino1.Name = "textBoxHoraDestino1";
+            this.textBoxHoraDestino1.Size = new System.Drawing.Size(291, 20);
+            this.textBoxHoraDestino1.TabIndex = 27;
             // 
-            // dateTimePickerHoraOrigen1
+            // textBoxHoraOrigen1
             // 
-            this.dateTimePickerHoraOrigen1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerHoraOrigen1.Location = new System.Drawing.Point(204, 205);
-            this.dateTimePickerHoraOrigen1.Name = "dateTimePickerHoraOrigen1";
-            this.dateTimePickerHoraOrigen1.Size = new System.Drawing.Size(291, 20);
-            this.dateTimePickerHoraOrigen1.TabIndex = 21;
+            this.textBoxHoraOrigen1.Location = new System.Drawing.Point(204, 189);
+            this.textBoxHoraOrigen1.Name = "textBoxHoraOrigen1";
+            this.textBoxHoraOrigen1.Size = new System.Drawing.Size(291, 20);
+            this.textBoxHoraOrigen1.TabIndex = 26;
             // 
-            // textBoxIdbus
+            // comboBoxNombreRuta
             // 
-            this.textBoxIdbus.Location = new System.Drawing.Point(204, 135);
-            this.textBoxIdbus.Name = "textBoxIdbus";
-            this.textBoxIdbus.Size = new System.Drawing.Size(291, 20);
-            this.textBoxIdbus.TabIndex = 20;
+            this.comboBoxNombreRuta.FormattingEnabled = true;
+            this.comboBoxNombreRuta.Location = new System.Drawing.Point(204, 100);
+            this.comboBoxNombreRuta.Name = "comboBoxNombreRuta";
+            this.comboBoxNombreRuta.Size = new System.Drawing.Size(291, 21);
+            this.comboBoxNombreRuta.TabIndex = 25;
             // 
             // comboBoxIdpropietario
             // 
             this.comboBoxIdpropietario.FormattingEnabled = true;
-            this.comboBoxIdpropietario.Location = new System.Drawing.Point(204, 355);
+            this.comboBoxIdpropietario.Location = new System.Drawing.Point(204, 338);
             this.comboBoxIdpropietario.Name = "comboBoxIdpropietario";
             this.comboBoxIdpropietario.Size = new System.Drawing.Size(291, 21);
             this.comboBoxIdpropietario.TabIndex = 19;
             // 
-            // labelIdbus
-            // 
-            this.labelIdbus.AutoSize = true;
-            this.labelIdbus.Location = new System.Drawing.Point(103, 142);
-            this.labelIdbus.Name = "labelIdbus";
-            this.labelIdbus.Size = new System.Drawing.Size(33, 13);
-            this.labelIdbus.TabIndex = 18;
-            this.labelIdbus.Text = "Idbus";
-            // 
             // labelIdpropietario
             // 
             this.labelIdpropietario.AutoSize = true;
-            this.labelIdpropietario.Location = new System.Drawing.Point(109, 363);
+            this.labelIdpropietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdpropietario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelIdpropietario.Location = new System.Drawing.Point(104, 346);
             this.labelIdpropietario.Name = "labelIdpropietario";
-            this.labelIdpropietario.Size = new System.Drawing.Size(69, 13);
+            this.labelIdpropietario.Size = new System.Drawing.Size(83, 13);
             this.labelIdpropietario.TabIndex = 17;
             this.labelIdpropietario.Text = "Id Propietario";
             // 
             // labelHoraDestino2
             // 
             this.labelHoraDestino2.AutoSize = true;
-            this.labelHoraDestino2.Location = new System.Drawing.Point(100, 319);
+            this.labelHoraDestino2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoraDestino2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelHoraDestino2.Location = new System.Drawing.Point(100, 304);
             this.labelHoraDestino2.Name = "labelHoraDestino2";
-            this.labelHoraDestino2.Size = new System.Drawing.Size(78, 13);
+            this.labelHoraDestino2.Size = new System.Drawing.Size(92, 13);
             this.labelHoraDestino2.TabIndex = 15;
             this.labelHoraDestino2.Text = "Hora Destino 2";
             // 
             // labelHoraOrigen2
             // 
             this.labelHoraOrigen2.AutoSize = true;
-            this.labelHoraOrigen2.Location = new System.Drawing.Point(100, 285);
+            this.labelHoraOrigen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoraOrigen2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelHoraOrigen2.Location = new System.Drawing.Point(100, 268);
             this.labelHoraOrigen2.Name = "labelHoraOrigen2";
-            this.labelHoraOrigen2.Size = new System.Drawing.Size(73, 13);
+            this.labelHoraOrigen2.Size = new System.Drawing.Size(86, 13);
             this.labelHoraOrigen2.TabIndex = 14;
             this.labelHoraOrigen2.Text = "Hora Origen 2";
             // 
             // labelHoraDestino1
             // 
             this.labelHoraDestino1.AutoSize = true;
-            this.labelHoraDestino1.Location = new System.Drawing.Point(100, 251);
+            this.labelHoraDestino1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoraDestino1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelHoraDestino1.Location = new System.Drawing.Point(95, 229);
             this.labelHoraDestino1.Name = "labelHoraDestino1";
-            this.labelHoraDestino1.Size = new System.Drawing.Size(78, 13);
+            this.labelHoraDestino1.Size = new System.Drawing.Size(92, 13);
             this.labelHoraDestino1.TabIndex = 13;
             this.labelHoraDestino1.Text = "Hora Destino 1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(309, 36);
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(272, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(168, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "Registrar Ruta\r\n";
             // 
             // labelHoraOrigen1
             // 
             this.labelHoraOrigen1.AutoSize = true;
-            this.labelHoraOrigen1.Location = new System.Drawing.Point(100, 213);
+            this.labelHoraOrigen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoraOrigen1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelHoraOrigen1.Location = new System.Drawing.Point(97, 192);
             this.labelHoraOrigen1.Name = "labelHoraOrigen1";
-            this.labelHoraOrigen1.Size = new System.Drawing.Size(73, 13);
+            this.labelHoraOrigen1.Size = new System.Drawing.Size(86, 13);
             this.labelHoraOrigen1.TabIndex = 8;
             this.labelHoraOrigen1.Text = "Hora Origen 1";
             // 
             // labelCantdAsientos
             // 
             this.labelCantdAsientos.AutoSize = true;
-            this.labelCantdAsientos.Location = new System.Drawing.Point(83, 175);
+            this.labelCantdAsientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantdAsientos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelCantdAsientos.Location = new System.Drawing.Point(78, 144);
             this.labelCantdAsientos.Name = "labelCantdAsientos";
-            this.labelCantdAsientos.Size = new System.Drawing.Size(95, 13);
+            this.labelCantdAsientos.Size = new System.Drawing.Size(113, 13);
             this.labelCantdAsientos.TabIndex = 7;
             this.labelCantdAsientos.Text = "Cantidad  Asientos";
             // 
             // labelNombreRuta
             // 
             this.labelNombreRuta.AutoSize = true;
+            this.labelNombreRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreRuta.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelNombreRuta.Location = new System.Drawing.Point(100, 100);
             this.labelNombreRuta.Name = "labelNombreRuta";
-            this.labelNombreRuta.Size = new System.Drawing.Size(70, 13);
+            this.labelNombreRuta.Size = new System.Drawing.Size(81, 13);
             this.labelNombreRuta.TabIndex = 6;
             this.labelNombreRuta.Text = "Nombre Ruta\r\n";
             this.labelNombreRuta.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBoxCant_asientos
             // 
-            this.textBoxCant_asientos.Location = new System.Drawing.Point(204, 168);
+            this.textBoxCant_asientos.Location = new System.Drawing.Point(204, 144);
             this.textBoxCant_asientos.Name = "textBoxCant_asientos";
             this.textBoxCant_asientos.Size = new System.Drawing.Size(291, 20);
             this.textBoxCant_asientos.TabIndex = 4;
             // 
-            // textBoxNRuta
-            // 
-            this.textBoxNRuta.Location = new System.Drawing.Point(204, 100);
-            this.textBoxNRuta.Name = "textBoxNRuta";
-            this.textBoxNRuta.Size = new System.Drawing.Size(291, 20);
-            this.textBoxNRuta.TabIndex = 3;
-            // 
             // buttonGuardar
             // 
+            this.buttonGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGuardar.Location = new System.Drawing.Point(309, 393);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardar.TabIndex = 2;
             this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.UseVisualStyleBackColor = false;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // textBoxId
@@ -266,9 +261,11 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelId.Location = new System.Drawing.Point(119, 63);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(18, 13);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "Id";
             // 
@@ -371,7 +368,6 @@
         private System.Windows.Forms.Label labelCantdAsientos;
         private System.Windows.Forms.Label labelNombreRuta;
         private System.Windows.Forms.TextBox textBoxCant_asientos;
-        private System.Windows.Forms.TextBox textBoxNRuta;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label labelId;
@@ -386,13 +382,12 @@
         private System.Windows.Forms.Label labelHoraOrigen2;
         private System.Windows.Forms.Label labelHoraDestino1;
         private System.Windows.Forms.Label labelIdpropietario;
-        private System.Windows.Forms.Label labelIdbus;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraDestino2;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraOrigen2;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraDestino1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraOrigen1;
-        private System.Windows.Forms.TextBox textBoxIdbus;
         private System.Windows.Forms.ComboBox comboBoxIdpropietario;
+        private System.Windows.Forms.ComboBox comboBoxNombreRuta;
+        private System.Windows.Forms.TextBox textBoxHoraDestino2;
+        private System.Windows.Forms.TextBox textBoxHoraOrigen2;
+        private System.Windows.Forms.TextBox textBoxHoraDestino1;
+        private System.Windows.Forms.TextBox textBoxHoraOrigen1;
     }
 }
 

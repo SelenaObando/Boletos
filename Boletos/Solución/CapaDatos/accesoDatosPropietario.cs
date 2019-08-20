@@ -171,7 +171,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("propiet");
+                cm = new SqlCommand("propiet", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@Idpropietario", "");
                 cm.Parameters.AddWithValue("@Nombresp", dato);

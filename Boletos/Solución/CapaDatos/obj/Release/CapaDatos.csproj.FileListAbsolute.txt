@@ -1,0 +1,7 @@
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Release\CapaDatos.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Release\CapaDatos.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Release\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\bin\Release\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Release\CapaDatos.csprojResolveAssemblyReference.cache
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Release\CapaDatos.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\CapaDatos\obj\Release\CapaDatos.pdb

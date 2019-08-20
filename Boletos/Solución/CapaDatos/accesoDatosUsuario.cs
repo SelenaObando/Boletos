@@ -172,7 +172,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("usuario");
+                cm = new SqlCommand("usuario", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@Idusuario", "");
                 cm.Parameters.AddWithValue("@Nombre", "");

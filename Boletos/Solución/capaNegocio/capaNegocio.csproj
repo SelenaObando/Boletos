@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logicaNegocioRespaldo.cs" />
     <Compile Include="logicaNegocioUsuario.cs" />
     <Compile Include="logicaNegocioClientes.cs" />
     <Compile Include="logicaNegocioCompra_boleto.cs" />

@@ -35,26 +35,24 @@ namespace capaPresentacionWF
                 if (buttonGuardar.Text == "Guardar")
                 {
                     Ruta objetoRuta = new Ruta();
-                    objetoRuta.NombreR = textBoxNRuta.Text;
-                    objetoRuta.Idbus = Convert.ToInt32(textBoxIdbus.Text);
+                    objetoRuta.NombreR = comboBoxNombreRuta.SelectedValue.ToString();
                     objetoRuta.Cant_asientos = Convert.ToInt32(textBoxCant_asientos.Text);
-                    objetoRuta.Hora_origen1 = Convert.ToDateTime(dateTimePickerHoraOrigen1.Text);
-                    objetoRuta.Hora_destino1 = Convert.ToDateTime(dateTimePickerHoraDestino1.Text);
-                    objetoRuta.Hora_origen2 = Convert.ToDateTime(dateTimePickerHoraOrigen2.Text);
-                    objetoRuta.Hora_origen2 = Convert.ToDateTime(dateTimePickerHoraOrigen2.Text);
-                    objetoRuta.Idpropietario = Convert.ToInt32(comboBoxIdpropietario.Text);
+                    objetoRuta.Hora_origen1 = textBoxHoraOrigen1.Text;
+                    objetoRuta.Hora_destino1 = textBoxHoraDestino1.Text;
+                    objetoRuta.Hora_origen2 = textBoxHoraOrigen2.Text;
+                    objetoRuta.Hora_origen2 = textBoxHoraDestino2.Text;
+                    objetoRuta.Idpropietario = Convert.ToInt32(comboBoxIdpropietario.SelectedValue.ToString());
 
                     if (logicaNR.insertarRuta(objetoRuta) > 0)
                     {
                         MessageBox.Show("Agregado con éxito");
                         dataGridViewRuta.DataSource = logicaNR.listarRuta();
-                        textBoxNRuta.Text = "";
-                        textBoxIdbus.Text = "";
+                        comboBoxNombreRuta.Text = "";
                         textBoxCant_asientos.Text = "";
-                        dateTimePickerHoraOrigen1.Text = "";
-                        dateTimePickerHoraDestino1.Text = "";
-                        dateTimePickerHoraOrigen2.Text = "";
-                        dateTimePickerHoraDestino2.Text = "";
+                        textBoxHoraOrigen1.Text="";
+                        textBoxHoraDestino1.Text = "";
+                        textBoxHoraOrigen2.Text = "";
+                        textBoxHoraDestino2.Text = "";
                         comboBoxIdpropietario.Text = "";
                         tabRecursos.SelectedTab = tabPage2;
                     }
@@ -65,26 +63,24 @@ namespace capaPresentacionWF
                 {
                     Ruta objetoRuta = new Ruta();
                     objetoRuta.Idruta = Convert.ToInt32(textBoxId.Text);
-                    objetoRuta.NombreR = textBoxNRuta.Text;
-                    objetoRuta.Idbus = Convert.ToInt32(textBoxIdbus.Text);
+                    objetoRuta.NombreR = comboBoxNombreRuta.Text;
                     objetoRuta.Cant_asientos = Convert.ToInt32(textBoxCant_asientos);
-                    objetoRuta.Hora_origen1 = Convert.ToDateTime(dateTimePickerHoraOrigen1);
-                    objetoRuta.Hora_destino1 = Convert.ToDateTime(dateTimePickerHoraDestino1);
-                    objetoRuta.Hora_origen2 = Convert.ToDateTime(dateTimePickerHoraOrigen2);
-                    objetoRuta.Hora_destino2 = Convert.ToDateTime(dateTimePickerHoraDestino2);
+                    objetoRuta.Hora_origen1 = textBoxHoraOrigen1.Text;
+                    objetoRuta.Hora_destino1 = textBoxHoraDestino1.Text;
+                    objetoRuta.Hora_origen2 = textBoxHoraOrigen2.Text;
+                    objetoRuta.Hora_destino2 = textBoxHoraDestino2.Text;
                     objetoRuta.Idpropietario = Convert.ToInt32(comboBoxIdpropietario.Text);
 
                     if (logicaNR.EditarRuta(objetoRuta) > 0)
                     {
                         MessageBox.Show("actualizado con éxito");
                         dataGridViewRuta.DataSource = logicaNR.listarRuta();
-                        textBoxNRuta.Text = "";
-                        textBoxIdbus.Text = "";
+                        comboBoxNombreRuta.Text = "";
                         textBoxCant_asientos.Text = "";
-                        dateTimePickerHoraOrigen1.Text = "";
-                        dateTimePickerHoraDestino1.Text = "";
-                        dateTimePickerHoraOrigen2.Text = "";
-                        dateTimePickerHoraDestino2.Text = "";
+                        textBoxHoraOrigen1.Text = "";
+                        textBoxHoraDestino1.Text = "";
+                        textBoxHoraOrigen2.Text = "";
+                        textBoxHoraDestino2.Text = "";
                         comboBoxIdpropietario.Text = "";
                         tabRecursos.SelectedTab = tabPage2;
                     }
@@ -105,10 +101,30 @@ namespace capaPresentacionWF
         {
             textBoxId.Visible = false;
             labelId.Visible = false;
-            List<int> propietar = new List<int>();
-            propietar = logicaPR.listarPropietario().Select(x => x.Idpropietario).ToList();
+            var datos = logicaPR.listarPropietario();
+            comboBoxIdpropietario.DataSource = (
+                from propietario in datos
+                select new {
+                    propietario.Idpropietario,
+                    nombrePropietario = propietario.Nombresp + " " + propietario.Apellidosp
+                }
+            ).ToList();
 
-            comboBoxIdpropietario.DataSource = propietar;
+            comboBoxIdpropietario.ValueMember = "Idpropietario";
+            comboBoxIdpropietario.DisplayMember = "nombrePropietario";
+
+            var datos1 = logicaNR.listarRuta();
+            comboBoxNombreRuta.DataSource = (
+                from ruta in datos1
+                select new
+                {
+                    ruta.NombreR,
+                    nombreruta = ruta.NombreR
+                }
+                      ).ToList();
+
+            comboBoxNombreRuta.ValueMember = "NombreR";
+            comboBoxNombreRuta.DisplayMember = "nombreruta";
            
             dataGridViewRuta.DataSource = logicaNR.listarRuta();
         }
@@ -123,13 +139,12 @@ namespace capaPresentacionWF
             labelIdpropietario.Visible = true;
 
             textBoxId.Text = dataGridViewRuta.CurrentRow.Cells["Idruta"].Value.ToString();
-            textBoxNRuta.Text = dataGridViewRuta.CurrentRow.Cells["NombreR"].Value.ToString();
-            textBoxIdbus.Text = dataGridViewRuta.CurrentRow.Cells["Idbus"].Value.ToString();
+            comboBoxNombreRuta.Text = dataGridViewRuta.CurrentRow.Cells["NombreR"].Value.ToString();
             textBoxCant_asientos.Text = dataGridViewRuta.CurrentRow.Cells["Cant_asientos"].Value.ToString();
-            dateTimePickerHoraOrigen1.Text = dataGridViewRuta.CurrentRow.Cells["Hora_origen1"].Value.ToString();
-            dateTimePickerHoraDestino1.Text = dataGridViewRuta.CurrentRow.Cells["Hora_destino1"].Value.ToString();
-            dateTimePickerHoraOrigen2.Text = dataGridViewRuta.CurrentRow.Cells["Hora_origen2"].Value.ToString();
-            dateTimePickerHoraDestino2.Text = dataGridViewRuta.CurrentRow.Cells["Hora_destino2"].Value.ToString();
+            textBoxHoraOrigen1.Text = dataGridViewRuta.CurrentRow.Cells["Hora_origen1"].Value.ToString();
+            textBoxHoraDestino1.Text = dataGridViewRuta.CurrentRow.Cells["Hora_destino1"].Value.ToString();
+            textBoxHoraOrigen2.Text = dataGridViewRuta.CurrentRow.Cells["Hora_origen2"].Value.ToString();
+            textBoxHoraDestino2.Text = dataGridViewRuta.CurrentRow.Cells["Hora_destino2"].Value.ToString();
             comboBoxIdpropietario.Text = dataGridViewRuta.CurrentRow.Cells["Idpropietario"].Value.ToString();
 
             tabRecursos.SelectedTab = tabPage1;

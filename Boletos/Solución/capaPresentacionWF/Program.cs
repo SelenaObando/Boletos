@@ -16,11 +16,12 @@ namespace capaPresentacionWF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fRuta());
+            //Application.Run(new fRuta());
             //Application.Run(new fPropietario());
             //Application.Run(new fClientes());
             //Application.Run(new fCompra_Boletos());
             //Application.Run(new fUsuario());
+            Application.Run(new MDIPrincipal());
         }
     }
 }

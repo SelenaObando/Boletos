@@ -30,6 +30,8 @@
         {
             this.tabCompraBoleto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxFecha = new System.Windows.Forms.TextBox();
+            this.comboBoxIdRuta = new System.Windows.Forms.ComboBox();
             this.labelIdRuta = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxIdRuta = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.tabCompraBoleto.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePickerFecha);
+            this.tabPage1.Controls.Add(this.textBoxFecha);
             this.tabPage1.Controls.Add(this.comboBoxIdRuta);
             this.tabPage1.Controls.Add(this.labelIdRuta);
             this.tabPage1.Controls.Add(this.buttonGuardar);
@@ -87,17 +87,34 @@
             this.tabPage1.Text = "Nuevo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // textBoxFecha
+            // 
+            this.textBoxFecha.Location = new System.Drawing.Point(241, 206);
+            this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.Size = new System.Drawing.Size(238, 20);
+            this.textBoxFecha.TabIndex = 22;
+            // 
+            // comboBoxIdRuta
+            // 
+            this.comboBoxIdRuta.FormattingEnabled = true;
+            this.comboBoxIdRuta.Location = new System.Drawing.Point(241, 241);
+            this.comboBoxIdRuta.Name = "comboBoxIdRuta";
+            this.comboBoxIdRuta.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxIdRuta.TabIndex = 21;
+            // 
             // labelIdRuta
             // 
             this.labelIdRuta.AutoSize = true;
+            this.labelIdRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIdRuta.Location = new System.Drawing.Point(154, 244);
             this.labelIdRuta.Name = "labelIdRuta";
-            this.labelIdRuta.Size = new System.Drawing.Size(42, 13);
+            this.labelIdRuta.Size = new System.Drawing.Size(49, 13);
             this.labelIdRuta.TabIndex = 15;
             this.labelIdRuta.Text = "Id Ruta";
             // 
             // buttonGuardar
             // 
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGuardar.Location = new System.Drawing.Point(315, 315);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
@@ -109,9 +126,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(290, 38);
+            this.label7.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(207, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 13);
+            this.label7.Size = new System.Drawing.Size(316, 24);
             this.label7.TabIndex = 12;
             this.label7.Text = "Registrar Compra de Boleto";
             // 
@@ -139,36 +158,40 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(159, 167);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Precio";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(159, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Fecha";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(96, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Numero de Asiento ";
             // 
             // labelId
             // 
             this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelId.Location = new System.Drawing.Point(159, 83);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(18, 13);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "Id";
             // 
@@ -242,21 +265,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Buscar";
             // 
-            // comboBoxIdRuta
-            // 
-            this.comboBoxIdRuta.FormattingEnabled = true;
-            this.comboBoxIdRuta.Location = new System.Drawing.Point(241, 241);
-            this.comboBoxIdRuta.Name = "comboBoxIdRuta";
-            this.comboBoxIdRuta.Size = new System.Drawing.Size(238, 21);
-            this.comboBoxIdRuta.TabIndex = 21;
-            // 
-            // dateTimePickerFecha
-            // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(241, 206);
-            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(238, 20);
-            this.dateTimePickerFecha.TabIndex = 22;
-            // 
             // fCompra_Boletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +306,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelIdRuta;
         private System.Windows.Forms.ComboBox comboBoxIdRuta;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
+        private System.Windows.Forms.TextBox textBoxFecha;
     }
 }

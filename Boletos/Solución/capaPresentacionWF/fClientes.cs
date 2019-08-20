@@ -34,8 +34,8 @@ namespace capaPresentacionWF
                     objetoClientes.Apellidos = textBoxApellidos.Text;
                     objetoClientes.Cedula = textBoxCedula.Text;
                     objetoClientes.Telefono = textBoxTelefono.Text;
-                    objetoClientes.Idruta = Convert.ToInt32(comboBoxIdRuta.Text);
-                    objetoClientes.Idboleto = Convert.ToInt32(comboBoxIdBoleto.Text);
+                    objetoClientes.Idruta = Convert.ToInt32(comboBoxIdRuta.SelectedValue.ToString());
+                    objetoClientes.Idboleto = Convert.ToInt32(comboBoxIdBoleto.SelectedValue.ToString());
 
                     if (logicaNC.insertarClientes(objetoClientes) > 0)
                     {
@@ -93,13 +93,31 @@ namespace capaPresentacionWF
             textBoxId.Visible = false;
             labelIdcliente.Visible = false;
 
-            List<int> Rut = new List<int>();
-            Rut = logicaRT.listarRuta().Select(x => x.Idruta).ToList();
-            List<int> compbol = new List<int>();
-            compbol = logicaCB.listarCompra_boleto().Select(x => x.Idboleto).ToList();
+            var datos = logicaRT.listarRuta();
+            comboBoxIdRuta.DataSource = (
+                from ruta in datos
+                select new
+                {
+                    ruta.Idruta,
+                    nombreruta = ruta.NombreR
+                }
+            ).ToList();
 
-            comboBoxIdRuta.DataSource = Rut;
-            comboBoxIdBoleto.DataSource = compbol;
+            comboBoxIdRuta.ValueMember = "Idruta";
+            comboBoxIdRuta.DisplayMember = "nombreruta";
+
+            var dato = logicaCB.listarCompra_boleto();
+            comboBoxIdBoleto.DataSource = (
+                from boleto in dato
+                select new
+                {
+                    boleto.Idboleto,
+                    compraboleto = boleto.Idboleto
+                }
+            ).ToList();
+
+            comboBoxIdBoleto.ValueMember = "Idboleto";
+            comboBoxIdBoleto.DisplayMember = "Idboleto";
             
             dataGridViewClientes.DataSource = logicaNC.listarClientes();
         }

@@ -46,6 +46,7 @@
     <Compile Include="accesoDatosRuta.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="accesoDatosRespaldoBD.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bds\CapaEntidades.csproj">

@@ -30,12 +30,12 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@Idruta", "");
                 cm.Parameters.AddWithValue("@NombreR", r.NombreR);
-                cm.Parameters.AddWithValue("@Idbus", r.Idbus);
                 cm.Parameters.AddWithValue("@Cant_asientos", r.Cant_asientos);
                 cm.Parameters.AddWithValue("@Hora_origen1", r.Hora_origen1);
                 cm.Parameters.AddWithValue("@Hora_destino1", r.Hora_destino1);
                 cm.Parameters.AddWithValue("@Hora_origen2", r.Hora_origen2);
                 cm.Parameters.AddWithValue("@Hora_destino2", r.Hora_destino2);
+                cm.Parameters.AddWithValue("@Idpropietario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -65,12 +65,12 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@Idruta", "");
                 cm.Parameters.AddWithValue("@NombreR", "");
-                cm.Parameters.AddWithValue("@Idbus", "");
                 cm.Parameters.AddWithValue("@Cant_asientos", "");
                 cm.Parameters.AddWithValue("@Hora_origen1", "");
                 cm.Parameters.AddWithValue("@Hora_destino1", "");
                 cm.Parameters.AddWithValue("@Hora_origen2", "");
                 cm.Parameters.AddWithValue("@Hora_destino2", "");
+                cm.Parameters.AddWithValue("@Idpropietario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -81,17 +81,16 @@ namespace CapaDatos
                     Ruta rt = new Ruta();
                     rt.Idruta = Convert.ToInt32(dr["Idruta"].ToString());
                     rt.NombreR = dr["NombreR"].ToString();
-                    rt.Idbus = Convert.ToInt32(dr["Idbus"].ToString());
                     rt.Cant_asientos = Convert.ToInt32(dr["Cant_asientos"].ToString());
-                    rt.Hora_origen1 = Convert.ToDateTime(dr["Hora_origen1"]);
-                    rt.Hora_destino1 = Convert.ToDateTime(dr["Hora_destino1"]);
-                    rt.Hora_origen2 = Convert.ToDateTime(dr["Hora_origen2"]);
-                    rt.Hora_destino2 = Convert.ToDateTime(dr["Hora_destino2"]);
+                    rt.Hora_origen1 = dr["Hora_origen1"].ToString();
+                    rt.Hora_destino1 = dr["Hora_destino1"].ToString();
+                    rt.Hora_origen2 = dr["Hora_origen2"].ToString();
+                    rt.Hora_destino2 =dr["Hora_destino2"].ToString();
+                    rt.Idpropietario = Convert.ToInt32(dr["Idpropietario"].ToString());
 
                     listaRuta.Add(rt);
                 }
             }
-
             catch (Exception e)
             {
                 e.Message.ToString();
@@ -116,12 +115,12 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@Idruta", idrut);
                 cm.Parameters.AddWithValue("@NombreR", "");
-                cm.Parameters.AddWithValue("@Idbus", "");
                 cm.Parameters.AddWithValue("@Cant_asientos", "");
                 cm.Parameters.AddWithValue("@Hora_origen1", "");
                 cm.Parameters.AddWithValue("@Hora_destino1", "");
                 cm.Parameters.AddWithValue("@Hora_origen2", "");
                 cm.Parameters.AddWithValue("@Hora_destino2", "");
+                cm.Parameters.AddWithValue("@Idpropietario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -152,12 +151,12 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@Idruta", r.Idruta);
                 cm.Parameters.AddWithValue("@NombreR", "");
-                cm.Parameters.AddWithValue("@Idbus", "");
                 cm.Parameters.AddWithValue("@Cant_asientos", "");
                 cm.Parameters.AddWithValue("@Hora_origen1", "");
                 cm.Parameters.AddWithValue("@Hora_destino1", "");
                 cm.Parameters.AddWithValue("@Hora_origen2", "");
                 cm.Parameters.AddWithValue("@Hora_destino2", "");
+                cm.Parameters.AddWithValue("@Idpropietario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -183,11 +182,10 @@ namespace CapaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("rut");
+                cm = new SqlCommand("rut", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@Idruta", "");
                 cm.Parameters.AddWithValue("@NombreR", dato);
-                cm.Parameters.AddWithValue("@Idbus", "");
                 cm.Parameters.AddWithValue("@Cant_asientos", "");
                 cm.Parameters.AddWithValue("@Hora_origen1", "");
                 cm.Parameters.AddWithValue("@Hora_destino1", "");
@@ -203,12 +201,12 @@ namespace CapaDatos
                     Ruta rt = new Ruta();
                     rt.Idruta = Convert.ToInt32(dr["Idruta"].ToString());
                     rt.NombreR = dr["NombreR"].ToString();
-                    rt.Idbus = Convert.ToInt32(dr["Idbus"].ToString());
                     rt.Cant_asientos = Convert.ToInt32(dr["Cant_asientos"].ToString());
-                    rt.Hora_origen1 = Convert.ToDateTime(dr["Hora_origen1"]);
-                    rt.Hora_destino1 = Convert.ToDateTime(dr["Hora_destino1"]);
-                    rt.Hora_origen2 = Convert.ToDateTime(dr["Hora_origen2"]);
-                    rt.Hora_destino2 = Convert.ToDateTime(dr["Hora_destino2"]);
+                    rt.Hora_origen1 = dr["Hora_origen1"].ToString();
+                    rt.Hora_destino1 = dr["Hora_destino1"].ToString();
+                    rt.Hora_origen2 = dr["Hora_origen2"].ToString();
+                    rt.Hora_destino2 = dr["Hora_destino2"].ToString();
+                    rt.Idpropietario = Convert.ToInt32(dr["Idpropietario"].ToString());
                     listaRuta.Add(rt);
                 }
             }

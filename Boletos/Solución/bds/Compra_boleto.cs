@@ -11,7 +11,7 @@ namespace CapaEntidades
         public int Idboleto { get; set; }
         public int Nmero_asiento { get; set; }
         public int Precio { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public int Idruta { get; set; }
     }
 }

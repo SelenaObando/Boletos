@@ -1,0 +1,4 @@
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\bin\Release\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\bin\Release\CapaEntidades.pdb
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\obj\Release\CapaEntidades.dll
+F:\Clases 4to año 1er semestre\Programación en Bases de Datos\TRABAJO DE BD\Boletos\Solución\bds\obj\Release\CapaEntidades.pdb
